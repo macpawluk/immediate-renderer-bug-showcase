@@ -1,0 +1,33 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication.MainWindow"
+        Title="Avalonia's Bug Showcase">
+
+  <Grid Height="300"
+        Width="300"
+        Background="LightBlue"
+        ClipToBounds="True">
+    <TextBlock Text="You should see three rectangles"
+               Margin="10" />
+
+    <StackPanel Orientation="Horizontal"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="0 10 0 0"
+                RenderTransformOrigin="0 0">
+      <StackPanel.RenderTransform>
+        <TransformGroup>
+          <RotateTransform Angle="90" />
+          <TranslateTransform X="240" />
+        </TransformGroup>
+      </StackPanel.RenderTransform>
+
+      <Rectangle Width="80" Height="40" Margin="0 0 5 0" Fill="Blue" ClipToBounds="True" />
+      <Rectangle Width="80" Height="40" Margin="0 0 5 0" Fill="Blue" ClipToBounds="True" />
+      <Rectangle Width="80" Height="40" Margin="0 0 5 0" Fill="Blue" ClipToBounds="True" />
+    </StackPanel>
+  </Grid>
+</Window>
